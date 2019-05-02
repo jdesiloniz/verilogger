@@ -1,0 +1,17 @@
+[options]
+mode prove
+depth 40
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -DLOGGER_LATTICE -formal logger.v fifo.v uart_tx.v lattice_genram.v logger_example_lattice.v
+prep -top logger_example_lattice
+
+[files]
+fifo.v
+lattice_genram.v
+uart_tx.v
+logger.v
+logger_example_lattice.v

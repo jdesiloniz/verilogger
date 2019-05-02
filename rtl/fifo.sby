@@ -1,0 +1,13 @@
+[options]
+mode prove
+depth 80
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -DFIFO -formal fifo.v
+prep -top fifo
+
+[files]
+fifo.v

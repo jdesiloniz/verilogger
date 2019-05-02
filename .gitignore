@@ -1,0 +1,8 @@
+.DS_Store
+*.txt
+*.blif
+*.bin
+*.vcd
+/rtl/fifo/*
+/rtl/logger/*
+/rtl/uart_tx/*

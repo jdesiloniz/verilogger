@@ -1,0 +1,16 @@
+[options]
+mode prove
+depth 40
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -DLOGGER -formal logger.v fifo.v uart_tx.v lattice_single_port_genram.v
+prep -top logger
+
+[files]
+fifo.v
+lattice_single_port_genram.v
+uart_tx.v
+logger.v
